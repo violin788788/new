@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referendum Data</title>
+    <style>
+        table {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 6px;
+            text-align: right;
+        }
+        th {
+            background-color: #eee;
+        }
+        td:first-child {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="font-size: 300%; font-weight: bold; text-align: center;">
+        <!-- You can add any title here if needed -->
+    </div>
+
+    <img src="/static/34.png" alt="Swiss Referendums Map" style="width: 100%; height: auto;">
+    <br>
+    <p style="font-size: 200%;">
+            The people who do not support direct democracy but keep it for themselves (Davos Democrats+EU/Brussels Eurocrats+Switzerland) keep it for themselves so that they can force on you all the things they refuse to have on themselves!  Look at what the Davos Democrats+EU/Brussels Eurocrats+Switzerland did for themselves in their own referendums!
+
+        <br>
+        <br> Minarets = banned! = 2009 referendum = 58%
+        <br> Hijabs = banned! = 2024 referendum = 51%
+        <br> Digi ID = banned! = 2021 referendum = 64%
+        <br> National debt = banned! = 2001 referendum = 85%
+        <br>
+        <br> Wtf!  Why would they force this shit on you if they don't have it on themselves! The Davos Democrats+EU/Brussels Eurocrats+Switzerland love Switzerland because it has a direct democracy. They don't want you to have it but keep it for themselves! Look at all the votes they had that they didn't want you to have. Implement this in America.
+
+        <br><br>
+        <a href="https://www.bk.admin.ch/ch/f/pore/va/vab_2_2_4_1.html#" target="_blank">Swiss Government Referendum Website</a><br>
+        <a href="https://www.bk.admin.ch/ch/f/pore/vi/vis_2_2_5_3.html" target="_blank">Swiss Referendums with at least 100k signatures (just click English on Google Translate)</a>
+        <br>Other countries!
+        <br>
+        ---generate other countries png here---
+        <br>
+        <p id="country_list">
+
+
+        </p>
+        <a href="/static/sweden.png" target="_blank">sweden</a>
+        <a href="/static/sweden.png" target="_blank">sweden</a>
+        <a href="/static/sweden.png" target="_blank">sweden</a>
+        <a href="/static/sweden.png" target="_blank">sweden</a>
+        
+        
+        <br>
+        Table of 5% of countries population required for referendum!
+        <br>
+
+    </p>
+
+    <div id="table-container"></div> <!-- This will hold the generated table -->
+
+    <script>
+        countries=[]
+        countries.push("sweden")
+        countries.push("france")
+        countries.push("norway")
+        countries.push("uk")
+        countries.push("germany")
+
+        let countryListElement = document.getElementById('country_list');
+
+        // Loop through the countries array
+        countries.forEach(function(country) {
+            // Create a new <a> element for each country
+            let a = document.createElement('a');
+            a.href = "/static/" + country.toLowerCase() + ".png";  // Construct the image path
+            a.target = "_blank";  // Open in a new tab
+            a.textContent = country;  // Set the text to the country name
+
+            // Append the link to the div
+            countryListElement.appendChild(a);
+
+            // Add a line break after each link for clarity
+            countryListElement.appendChild(document.createElement('br'));
+        });
+
+
+
+
+        const oecd_data = [
+            ["Albania", 2.87, 2.30, 115],
+            ["Andorra", 0.08, 0.06, 3.16],
+            ["Armenia", 3.03, 2.42, 121],
+            ["Austria", 9.01, 7.21, 360.5],
+            ["Azerbaijan", 10.22, 8.18, 409],
+            ["Belarus", 9.36, 7.49, 374.5],
+            ["Belgium", 11.72, 9.38, 469],
+            ["Bosnia & Herzegovina", 3.28, 2.62, 131],
+            ["Bulgaria", 6.52, 5.22, 261],
+            ["Croatia", 4.06, 3.25, 162.5],
+            ["Cyprus", 1.23, 0.98, 49.2],
+            ["Czech Republic", 10.74, 8.59, 429.5],
+            ["Denmark", 5.92, 4.73, 236.5],
+            ["Estonia", 1.29, 1.03, 51.5],
+            ["Finland", 5.55, 4.44, 222],
+            ["France", 67.87, 54.30, 2720],
+            ["Georgia", 3.73, 2.98, 149],
+            ["Germany", 83.37, 66.70, 3340],
+            ["Greece", 10.45, 8.36, 418],
+            ["Hungary", 9.66, 7.73, 386.5],
+            ["Iceland", 0.40, 0.32, 16],
+            ["Ireland", 5.27, 4.22, 211],
+            ["Italy", 60.36, 48.29, 2410],
+            ["Kazakhstan", 19.38, 15.50, 775],
+            ["Kosovo", 1.81, 1.45, 72.5],
+            ["Latvia", 1.86, 1.49, 74.5],
+            ["Liechtenstein", 0.04, 0.03, 1.56],
+            ["Lithuania", 2.83, 2.26, 113],
+            ["Luxembourg", 0.65, 0.52, 25.8],
+            ["Malta", 0.53, 0.43, 21.25],
+            ["Moldova", 2.57, 2.06, 103],
+            ["Monaco", 0.04, 0.03, 1.56],
+            ["Montenegro", 0.62, 0.50, 24.88],
+            ["Netherlands", 18.43, 14.74, 737],
+            ["North Macedonia", 2.08, 1.66, 83],
+            ["Norway", 5.53, 4.42, 221],
+            ["Poland", 38.29, 30.63, 1530],
+            ["Portugal", 11.39, 9.11, 455.5],
+            ["Romania", 19.35, 15.48, 774],
+            ["Russia", 146.45, 117.16, 5860],
+            ["San Marino", 0.03, 0.03, 1.36],
+            ["Serbia", 8.77, 7.02, 351],
+            ["Slovakia", 5.45, 4.36, 218],
+            ["Slovenia", 2.11, 1.69, 84.5],
+            ["Spain", 47.59, 38.07, 1900],
+            ["Sweden", 10.50, 8.40, 420],
+            ["Switzerland", 9.05, 7.24, 362],
+            ["Turkey", 86.94, 69.55, 3480],
+            ["Ukraine", 39.63, 31.70, 1590],
+            ["United Kingdom", 67.88, 54.30, 2720]
+        ];
+
+        function formatNumber(num) {
+            return num.toLocaleString(); // Formats numbers with commas
+        }
+
+        function generateTable(data) {
+            let table_html = `
+                <table border="1" cellpadding="6" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Country</th>
+                            <th>Population (millions)</th>
+                            <th>Eligible Voters (millions)</th>
+                            <th>5% of Eligible Voters Required for Referendum (thousands)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            data.forEach(row => {
+                let [country, pop, eligible, voters] = row;
+
+                table_html += `
+                    <tr>
+                        <td>${country}</td>
+                        <td>${formatNumber(pop)}</td>
+                        <td>${formatNumber(eligible)}</td>
+                        <td>${formatNumber(voters)}</td>
+                    </tr>
+                `;
+            });
+
+            table_html += "</tbody></table>";
+            return table_html;
+        }
+
+        // Inject the table into the page
+        document.getElementById('table-container').innerHTML = generateTable(oecd_data);
+    </script>
+
+</body>
+</html>
